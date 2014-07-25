@@ -1,6 +1,6 @@
 var User = Parse.Object.extend({
+	className: "User",
 	idAttribute: 'objectId',
-	classname: "user",
 	defaults: {
 		username: '',
 		password: '',

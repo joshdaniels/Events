@@ -1,5 +1,5 @@
-var Event = Parse.Object.extend({
-	classname: "event",
+var Concert = Parse.Object.extend({
+	className: "Concert",
 	idAttribute: 'objectId',
 
 	defaults: {
@@ -13,16 +13,17 @@ var Event = Parse.Object.extend({
 	},
 
 	initialize:function(){
+		
 		console.log("created new event");
 	}
 
 });
 
-var EventCollection = Parse.Collection.extend({
-  model: Event
+var ConcertCollection = Parse.Collection.extend({
+  model: Concert
 });
  
-var all_events = new EventCollection();
+
  
 // // Construct a query to get the current user's todo items
 // var query = new Parse.Query(ParseTodo);

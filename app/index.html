@@ -23,8 +23,18 @@
     <!-- endbuild -->
   </head>
   <body>
+  <form class="concert_form">
+  <input class="title_field"type="text" placeholder="title"/>
+  <input class="date_field"type="date" placeholder="concert date"/>
+  <input class="city_field"type="text" placeholder="city"/>
+  <input class="address_field"type="text" placeholder="address"/>
+  <input class="time_field"type="text" placeholder="time"/>
+  <textarea class="description_field"type="text" placeholder="decription"/></textarea>
+  <button class="submit_button">ok</button>
+  </form>
 
-   
+   <div class="concert_content">
+   </div>
 
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
@@ -36,7 +46,10 @@
     <!-- endbuild -->
 
         <!-- build:js scripts/main.js -->
-        <script src="scripts/main.js"></script>
+        <script src='scripts/models/event_model.js'></script>
+        <script src='scripts/views/event_list_view.js'></script>
+        <script src='scripts/router.js'></script>
+         <script src="scripts/main.js"></script>
         <!-- endbuild -->
 </body>
 </html>

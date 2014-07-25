@@ -28,8 +28,13 @@ $('.submit_button').on('click', function(event) {
 
 	all_concerts.fetch().done(function (){
 
-	window.router = new Router();
-	 Backbone.history.start();
+		all_bands.fetch().done(function (){
+			
+			window.router = new Router();
+	 		Backbone.history.start();
+		});
+
+	
 	});
 
 $('.band_submit_button').on('click', function(event) {
@@ -40,19 +45,20 @@ $('.band_submit_button').on('click', function(event) {
 		city: $('.band_city_field').val(),
 		description: $('.band_description_field').val()
 	});
+	console.log("created new band");
 	
 	all_bands.add(newband);
 	newband.save(null, {success: function (newband) {
 
 	}});
+
 	
 	window.router.navigate('', { trigger: true });
 
 	$(this).trigger('reset');
 });
 
-	all_bands.fetch().done(function (){
-});
+
 
 	  
 	

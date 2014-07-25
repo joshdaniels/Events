@@ -12,7 +12,9 @@ var Router = Backbone.Router.extend ({
 
 	home: function () {
 	 new ConcertView({ collection: all_concerts});
-	 var addband = new BandCollection({collection: all_bands});
+	 new BandView({ collection: all_bands});
+	
+
 	}
 });
 

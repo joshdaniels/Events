@@ -36,6 +36,17 @@
    <div class="concert_content">
    </div>
 
+   <form class="Band_form">
+  <input class="band_name_field"type="text" placeholder="band name"/>
+  <input class="genre_field"type="text" placeholder="gere"/>
+  <input class="band_city_field"type="text" placeholder="city"/>
+  <textarea class="band_description_field"type="text" placeholder="decription"/></textarea>
+  <button class="band_submit_button">ok</button>
+  </form>
+
+  <div class="band_content">
+   </div>
+
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
     <script src="../bower_components/jquery/dist/jquery.js"></script>
@@ -46,9 +57,10 @@
     <!-- endbuild -->
 
         <!-- build:js scripts/main.js -->
-        <script src='scripts/models/event_model.js'></script>
+        <script src='scripts/models/concert_model.js'></script>
+        <script src='scripts/models/band_model.js'></script>
         <script src='scripts/template.js'></script>
-       <script src='scripts/views/event_list_view.js'></script>
+       <script src='scripts/views/concert_list_view.js'></script>
           <script src='scripts/router.js'></script>
          <script src="scripts/main.js"></script>
         <!-- endbuild -->

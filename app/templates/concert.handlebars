@@ -1,9 +1,26 @@
-<div class='eventFullSize'>
-	<span>{{title}}</span>
-	<span>{{description}}</span>
-	<span>{{date}}</span>
-	<span>{{city}}</span>
-	<span>{{address}}</span> 
-	<span>{{time}}</span>
-	<span>{{objectId}}</span>
+{{#each data}}
+<div class="card">
+<div class="card-image">
+<img src="{{{image_url}}}" alt="">
 </div>
+<div class="card-header" id="{{objectId}}">
+{{title}}
+</div>
+<div class="card-copy">
+<p>{{description}}</p>
+</div>
+<div class="card-stats">
+<ul>
+	<li>Date<span>{{date}}</span></li>
+	<li>Time<span>{{time}}</span></li>
+	<li>City<span>{{city}}</span></li>
+	<li>Address<span>{{address}}</span></li>
+	<li>id<span>{{objectId}}</span></li>
+	<img class="going" src="../images/going_icon.png"/>
+	<img class="maybe" src="../images/maybe_icon.png"/>
+	<img class="not_going" src="../images/not_going_icon.png"/>
+</ul>
+</div>
+</div>
+</div>
+{{/each}}

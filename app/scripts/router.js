@@ -12,10 +12,11 @@ var Router = Backbone.Router.extend ({
 
 	home: function () {
 	 new ConcertView({ collection: all_concerts});
-	 new BandView({ collection: all_bands});
-	
+	// $(".concert_form").hide();
+},
 
+	displayConcert: function (id){
+		new IndividualConcertView({ concertid: id, collection: all_concerts});
 	}
+
 });
-
-

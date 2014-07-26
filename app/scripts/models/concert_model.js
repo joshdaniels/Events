@@ -7,20 +7,12 @@ var Concert = Parse.Object.extend({
 		date: '',
 		city: '',
 		address: '',
-		time: ''
+		time: '',
+		image_url: ''
 	}
 });
 
 var ConcertCollection = Parse.Collection.extend({
   model: Concert
-		
-});	
 
-		
-
-
-
-
- 
-
- 
+});

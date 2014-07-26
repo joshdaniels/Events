@@ -14,13 +14,15 @@ $('.submit_button').on('click', function(event) {
 		address: $('.address_field').val(),
 		time: $('.time_field').val(),
 		description: $('.description_field').val(),
+		image_url: $('.image_field').val(),
+
 	});
-	
+
 	all_concerts.add(newconcert);
 	newconcert.save(null, {success: function (newconcert) {
 
 	}});
-	
+
 	window.router.navigate('', { trigger: true });
 
 	$(this).trigger('reset');
@@ -28,52 +30,8 @@ $('.submit_button').on('click', function(event) {
 
 	all_concerts.fetch().done(function (){
 
-		all_bands.fetch().done(function (){
-			
+
+
 			window.router = new Router();
 	 		Backbone.history.start();
 		});
-
-	
-	});
-
-$('.band_submit_button').on('click', function(event) {
-	event.preventDefault();
-	var newband = new Band({
-		name: $('.band_name_field').val(),
-		genre: $('.genre_field').val(),
-		city: $('.band_city_field').val(),
-		description: $('.band_description_field').val()
-	});
-	console.log("created new band");
-	
-	all_bands.add(newband);
-	newband.save(null, {success: function (newband) {
-
-	}});
-
-	
-	window.router.navigate('', { trigger: true });
-
-	$(this).trigger('reset');
-});
-
-
-
-	  
-	
-
-
-
-
-
-	
-
-
-
-	
-
-
-
-
-

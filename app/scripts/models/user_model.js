@@ -1,45 +1,23 @@
 var User = Parse.Object.extend({
-	className: "User",
-	idAttribute: 'objectId',
-	defaults: {
-		username: '',
-		password: '',
-		band: '',
-		city: '',
-		address: ''
 
-	},
+className: "user",
 
-	initialize:function(){
-		console.log("created new user");
-		var user = new Parse.User();
-		user.set("username", "my name");
-		user.set("password", "my pass");
-		user.set("email", "email@example.com");
- 
-		// other fields can be set just like with Parse.Object
-		user.set("phone", "415-392-0202");
- 
-		user.signUp(null, {
-		  	success: function(user) {
-		    	// Hooray! Let them use the app now.
-		  	},
-		  	error: function(user, error) {
-		    	// Show the error message somewhere and let the user try again.
-		    	alert("Error: " + error.code + " " + error.message);
-			}
-		});
-	}
+  defaults:{
+ username: '',
+ password: ''
+
+},
+  idAttribute: "objectId" ,
+
+  initialize: function (){
+    console.log("a new post has been created.");
+  }
 });
 
-var UserCollection = Parse.Collection.extend({
-  model: User
+var Users = Parse.Collection.extend({
+
+    model: User,
+
 });
- 
-var all_users = new UserCollection();
- 
-// // Construct a query to get the current user's todo items
-// var query = new Parse.Query(ParseTodo);
-// query.equalTo("user", Parse.User.current());
-// todos.query = query;
-// todos.fetch();
+
+var all_users = new Users();

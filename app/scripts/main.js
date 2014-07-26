@@ -28,10 +28,31 @@ $('.submit_button').on('click', function(event) {
 	$(this).trigger('reset');
 });
 
-	all_concerts.fetch().done(function (){
-
-
-
+all_concerts.fetch().done(function (){
 			window.router = new Router();
 	 		Backbone.history.start();
-		});
+});
+
+/*SIGN UP A PARTICULAR USER (NEW) */
+$('.form1').on('submit', function  (event) {
+
+			event.preventDefault();
+			var user = new Parse.User();
+			user.set("username", $("#name").val());
+			user.set("password", $("#password").val());
+			user.set("email", $("#email").val());
+
+			user.signUp(null, {
+			  success: function(user) {
+			    // Hooray! Let them use the app now.
+
+			  },
+
+			  error: function(user, error) {
+			    // Show the error message somewhere and let the user try again.
+			    alert("Error: " + error.code + " " + error.message);
+			  }
+			});
+
+			$(this).trigger('reset');
+	});

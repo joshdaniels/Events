@@ -38,10 +38,19 @@
 
           <form class="form1" action="">
             <!-- <p>Signup</p> -->
-            <input name="name" id="name" class="signup" type="text" placeholder="Name"/></br>
-            <input name="password" id="password" class="signup" type="text" placeholder="Password"/></br>
-            <input name="email" id="email" class="signup" type="text" placeholder="Email"/></br>
+            <input name="name" id="signUpName" class="signup" type="text" placeholder="Name"/></br>
+            <input name="password" id="signUpPassword" class="signup" type="text" placeholder="Password"/></br>
+            <input name="email" id="signUpEmail" class="signup" type="text" placeholder="Email"/></br>
             <input type="submit" class='signUpUser' value="Sign Up"/>
+            <li class="login_link link">Already Signed Up?</li>
+          </form>
+
+          <form class="log_in_form" action="">
+            <!-- <p>Signup</p> -->
+            <input name="name" id="loginName" class="signup" type="text" placeholder="Name"/></br>
+            <input name="password" id="loginPassword" class="signup" type="text" placeholder="Password"/></br>
+            <input type="submit" class='LogInUser' value="Log In Motherfucker"/>
+            <li class="sign_up_link link">Are You Really That Stupid? Go Sign Up. Motherfucker!</li>
           </form>
 
           <form class='form2'></form>
@@ -58,6 +67,7 @@
           </form>
 
           <div class="concert_content"></div>
+          <div class='user_concert_content'</div>
 
           <!-- build:js scripts/vendor.js -->
           <!-- bower:js -->
@@ -76,6 +86,7 @@
           <script src='scripts/views/individual_concert_view.js'></script>
           <script src='scripts/views/main_nav.js'></script>
           <script src='scripts/views/add_concert_view.js'></script>
+          <script src='scripts/views/user_concert_list_view.js'></script>
           <script src='scripts/views/signup_view.js'></script>
           <script src='scripts/router.js'></script>
           <script src="scripts/main.js"></script>

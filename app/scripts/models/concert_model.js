@@ -16,3 +16,6 @@ var ConcertCollection = Parse.Collection.extend({
   model: Concert
 
 });
+
+var all_concerts = new ConcertCollection();
+var user_concerts = new ConcertCollection();

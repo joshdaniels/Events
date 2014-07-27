@@ -15,8 +15,7 @@ var ConcertListView = Backbone.View.extend ({
 
 	render:function (){
 		$('.form2').hide();
-		$('.concert_form').hide();
-		$('.concert_content').hide();
+		$('.concert_form').hide()
 		var list = this.collection;
 		var template = Handlebars.templates.concert;
 		var rendered = template({data:this.collection.toJSON()});

@@ -11,12 +11,15 @@ body {
   color: #333;
 }
 
+.link { color: white; font-weight: bold; list-style: none; background: black; width: 200px; overflow-x: wrap;}
 
 .concert_content{
   float:left;
 }
 
-.main_nav, .form1, .form2, .concert_form, .concert_content { display: none;}
+
+.form1, .form2, .concert_form, .log_in_form { margin: auto; max-width: 500px; }
+.main_nav, .form1, .form2, .concert_form, .concert_content, .log_in_form , .user_concert_content{ display: none;}
 
 .card {
   $card-border-color: $base-border-color;

@@ -34,6 +34,7 @@ var MainNavView = Backbone.View.extend ({
   },
 
   myevents: function (){
+      new UserConcertListView({ collection: user_concerts});
       $('.test').text('We CHANGED THIS LINK!! HAHA!');
   }
 

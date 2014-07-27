@@ -28,10 +28,15 @@ var AddConcertView = Backbone.View.extend ({
           description: $('.description_field').val(),
           image_url: $('.image_field').val(),
       });
-      all_concerts.add(newconcert);
 
+      all_concerts.add(newconcert);     //add concert to the collection
+      var user = Parse.User.current();  //grab the current user
+      newconcert.set('user', user);     // Associate the concert instance with the user
+      
       newconcert.save(null, {
-          success: function (newconcert) { /* Working!*/ },
+          success: function (newconcert) {
+              /* Working!*/
+          },
           error: function(error) { }
       });
       window.router.navigate('', { trigger: true });

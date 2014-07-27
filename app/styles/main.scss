@@ -16,6 +16,8 @@ body {
   float:left;
 }
 
+.main_nav, .form1, .form2, .concert_form, .concert_content { display: none;}
+
 .card {
   $card-border-color: $base-border-color;
   $card-border: 1px solid $card-border-color;

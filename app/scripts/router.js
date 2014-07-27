@@ -13,14 +13,18 @@ var Router = Backbone.Router.extend ({
 		},
 
 		displayConcert: function (id){
+				$('.form1').hide();
+				$('.form2').hide();
+				$('.concert_form').hide();
 				new IndividualConcertView({ concertid: id, collection: all_concerts});
 		},
 
 		addConcert: function(){
-				$('.form1').hide();
-				$('.fomr2').hide();
-				$('.concert_form').hide();
-				$('.concert_content').show();
+				// new AddConcertView();
+				// $('.form1').hide();
+				// $('.fomr2').hide();
+				// $('.concert_form').hide();
+				// $('.concert_content').show();
 		}
 
 });

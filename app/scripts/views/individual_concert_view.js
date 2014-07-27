@@ -8,7 +8,9 @@ var IndividualConcertView = Backbone.View.extend({
 	},
 
 	initialize: function(a){
-	    this.options = a; ;
+			new MainNavView();
+			$('.concert_content').show();
+	    this.options = a;
 	    this.render();
 	},
 

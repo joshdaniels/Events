@@ -10,7 +10,7 @@ var ConcertListView = Backbone.View.extend ({
 	initialize: function (){
 		$('.main_nav').hide();
 		this.collection.on ('change', this.render, this);
-		this.render ();
+		this.render();
 	},
 
 	render:function (){
@@ -30,7 +30,7 @@ var ConcertListView = Backbone.View.extend ({
 	oneConcert: function (event) {
      event.preventDefault();
      var concert_id = $(event.target).attr('id');
-		console.log(event);
+		 console.log(event);
 		 console.log(concert_id);
      window.router.navigate('concert/'+ concert_id, {trigger: true});
    },

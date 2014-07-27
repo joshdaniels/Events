@@ -6,54 +6,55 @@ var all_concerts = new ConcertCollection();
 var all_bands = new BandCollection();
 
 /* SIGN UP A PARTICULAR USER (NEW) */
-$('.form1').on('submit', function  (event) {
-		event.preventDefault();
-		var user = new Parse.User();
-		user.set("username", $("#name").val());
-		user.set("password", $("#password").val());
-		user.set("email", $("#email").val());
-		user.signUp(null, {
-				success: function(user) {
-					// Hooray! Let them use the app now.
-					$('.form1').hide();
-					$('.concert_content').show();
-					new MainNavView();
-				},
-				error: function(user, error) {
-					// Show the error message somewhere and let the user try again.
-					alert("Error: " + error.code + " " + error.message);
-				}
-		});
-		$(this).trigger('reset');
-});
+// $('.form1').on('submit', function  (event) {
+// 		event.preventDefault();
+// 		var user = new Parse.User();
+// 		user.set("username", $("#name").val());
+// 		user.set("password", $("#password").val());
+// 		user.set("email", $("#email").val());
+// 		user.signUp(null, {
+// 				success: function(user) {
+// 					// Hooray! Let them use the app now.
+// 					$('.form1').hide();
+// 					$('.concert_content').show();
+// 					$('.main_nav').show();
+// 					new MainNavVi
+// 				},
+// 				error: function(user, error) {
+// 					// Show the error message somewhere and let the user try again.
+// 					alert("Error: " + error.code + " " + error.message);
+// 				}
+// 		});
+// 		$(this).trigger('reset');
+// });
 
 
 /* CREATE A NEW CONCERT OBJECT AND SAVE IT */
-$('.submit_button').on('click', function(event) {
-		event.preventDefault();
-		var newconcert = new Concert({
-				title: $('.title_field').val(),
-				date: $('.date_field').val(),
-				city: $('.city_field').val(),
-				address: $('.address_field').val(),
-				time: $('.time_field').val(),
-				description: $('.description_field').val(),
-				image_url: $('.image_field').val(),
-		});
-		all_concerts.add(newconcert);
-
-		newconcert.save(null, {
-				success: function (newconcert) {
-						// Working!
-						window.router.navigate('#concert/'+newconcert, {trigger: true});
-				},
-				error: function(error) {
-
-				}
-		});
-		window.router.navigate('', { trigger: true });
-		$(this).trigger('reset');
-});
+// $('.submit_button').on('click', function(event) {
+// 		event.preventDefault();
+// 		var newconcert = new Concert({
+// 				title: $('.title_field').val(),
+// 				date: $('.date_field').val(),
+// 				city: $('.city_field').val(),
+// 				address: $('.address_field').val(),
+// 				time: $('.time_field').val(),
+// 				description: $('.description_field').val(),
+// 				image_url: $('.image_field').val(),
+// 		});
+// 		all_concerts.add(newconcert);
+//
+// 		newconcert.save(null, {
+// 				success: function (newconcert) {
+// 						// Working!
+// 						window.router.navigate('#concert/'+newconcert, {trigger: true});
+// 				},
+// 				error: function(error) {
+//
+// 				}
+// 		});
+// 		window.router.navigate('', { trigger: true });
+// 		$(this).trigger('reset');
+// });
 
 
 /* GET ALL THE CONCERT DATA */

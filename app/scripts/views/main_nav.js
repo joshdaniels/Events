@@ -3,9 +3,9 @@ var MainNavView = Backbone.View.extend ({
   el: '.main_nav',
 
   events: {
-      'click .add_event ': 'addConcert',
+      'click .reload ': 'reload_app',
+      'click .add_event ': 'showAddEventForm',
       'click .my_events ': 'myevents'
-
   },
 
   initialize: function (){
@@ -19,12 +19,18 @@ var MainNavView = Backbone.View.extend ({
     this.$el.html(rendered);
   },
 
-  addConcert: function(){
+  reload_app: function(){
+    window.router.navigate( '', {trigger: true} );
+  //  window.router.navigate('concert/'+ concert_id, {trigger: true});
+  },
+
+  showAddEventForm: function(){
     // We only want to see the ADD Concert FORM
     $('.form1').hide();
     $('.form2').hide();
     $('.concert_form').show();
     $('.concert_content').hide();
+    new AddConcertView();
   },
 
   myevents: function (){

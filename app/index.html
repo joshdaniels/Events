@@ -22,54 +22,60 @@
     <script src="../bower_components/modernizr/modernizr.js"></script>
     <!-- endbuild -->
   </head>
+
   <body>
+      <div class='mainContainer'>
 
-    <form class="form1" action="">
-        <!-- <p>Signup</p> -->
-        <input name="name" id="name" class="signup" type="text" placeholder="Name"/></br>
-        <input name="password" id="password" class="signup" type="text" placeholder="Password"/></br>
-        <input name="email" id="email" class="signup" type="text" placeholder="Email"/></br>
-        <input type="submit" value="Sign Up"/>
-      </form>
+          <div class='main_nav'>
+            <ul>
+              <li class='add_event'>Add Event</li>
+              <li class='my_events'>My Events</li>
+              <li class='test'>Edit</li>
+            </ul>
+          </div>
 
-      <form class="form2">
-      </form>
+          <form class="form1" action="">
+            <!-- <p>Signup</p> -->
+            <input name="name" id="name" class="signup" type="text" placeholder="Name"/></br>
+            <input name="password" id="password" class="signup" type="text" placeholder="Password"/></br>
+            <input name="email" id="email" class="signup" type="text" placeholder="Email"/></br>
+            <input type="submit" value="Sign Up"/>
+          </form>
 
-      
-  <form class="concert_form">
-  <input class="image_field"type="text" placeholder="Image url"/>
-  <input class="title_field"type="text" placeholder="title"/>
-  <input class="date_field"type="date" placeholder="concert date"/>
-  <input class="city_field"type="text" placeholder="city"/>
-  <input class="address_field"type="text" placeholder="address"/>
-  <input class="time_field"type="text" placeholder="time"/>
-  <textarea class="description_field"type="text" placeholder="decription"/></textarea>
-  <button class="submit_button">ok</button>
-  </form>
+          <form class='form2'></form>
 
-   <div class="concert_content">
+          <form class="concert_form">
+              <input class="image_field"type="text" placeholder="Image url"/>
+              <input class="title_field"type="text" placeholder="title"/>
+              <input class="date_field"type="date" placeholder="concert date"/>
+              <input class="city_field"type="text" placeholder="city"/>
+              <input class="address_field"type="text" placeholder="address"/>
+              <input class="time_field"type="text" placeholder="time"/>
+              <textarea class="description_field"type="text" placeholder="decription"/></textarea>
+              <button class="submit_button">ok</button>
+          </form>
 
+          <div class="concert_content"></div>
 
+          <!-- build:js scripts/vendor.js -->
+          <!-- bower:js -->
+          <script src="../bower_components/jquery/dist/jquery.js"></script>
+          <script src="../bower_components/underscore/underscore.js"></script>
+          <script src="../bower_components/backbone/backbone.js"></script>
+          <script src="../bower_components/handlebars/handlebars.js"></script>
+          <!-- endbower -->
+          <!-- endbuild -->
 
-
-
-    <!-- build:js scripts/vendor.js -->
-    <!-- bower:js -->
-    <script src="../bower_components/jquery/dist/jquery.js"></script>
-    <script src="../bower_components/underscore/underscore.js"></script>
-    <script src="../bower_components/backbone/backbone.js"></script>
-    <script src="../bower_components/handlebars/handlebars.js"></script>
-    <!-- endbower -->
-    <!-- endbuild -->
-
-        <!-- build:js scripts/main.js -->
-        <script src='scripts/models/concert_model.js'></script>
-        <script src='scripts/models/band_model.js'></script>
-        <script src='scripts/template.js'></script>
-       <script src='scripts/views/concert_list_view.js'></script>
-       <script src='scripts/views/individual_concert_view.js'></script>
+          <!-- build:js scripts/main.js -->
+          <script src='scripts/models/concert_model.js'></script>
+          <script src='scripts/models/band_model.js'></script>
+          <script src='scripts/template.js'></script>
+          <script src='scripts/views/concert_list_view.js'></script>
+          <script src='scripts/views/individual_concert_view.js'></script>
+          <script src='scripts/views/main_nav.js'></script>
           <script src='scripts/router.js'></script>
-         <script src="scripts/main.js"></script>
-        <!-- endbuild -->
-</body>
+          <script src="scripts/main.js"></script>
+          <!-- endbuild -->
+      </div>
+  </body>
 </html>

@@ -3,7 +3,7 @@ var Signup = Backbone.View.extend ({
     el: '.form1',
 
     events: {
-        'submit .form1 ': 'CreateUser'
+        'click .signUpUser ': 'CreateUser'
     },
 
     initialize: function (){

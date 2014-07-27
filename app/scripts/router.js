@@ -8,6 +8,7 @@ var Router = Backbone.Router.extend ({
 		},
 
 		signUp: function () {
+				new Signup();
 				new ConcertListView({ collection: all_concerts});
 				$('.form1').show();
 		},

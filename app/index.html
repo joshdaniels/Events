@@ -16,6 +16,7 @@
 
     <!-- build:css styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
+    <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
     <!-- endbuild -->
 
     <!-- build:js scripts/vendor/modernizr.js -->
@@ -29,29 +30,30 @@
 
           <div class='main_nav'>
             <ul>
-              <li class='sign_up'>Sign Up</li>
+              <a href="/"><li class='sign_up'>Sign Up</li></a>
               <li class='add_event'>Add Event</li>
               <li class='my_events'>My Events</li>
-              <li class='test'>Edit</li>
+              <li class='test'>All Events</li>
             </ul>
           </div>
 
           <form class="form1" action="">
-            <div class="signup_wrapper">
+            <h3>ShowUp</h3>
             <input name="name" id="signUpName" class="signup" type="text" placeholder="Name"/></br>
             <input name="password" id="signUpPassword" class="signup" type="text" placeholder="Password"/></br>
             <input name="email" id="signUpEmail" class="signup" type="text" placeholder="Email"/></br>
             <input type="submit" class='signUpUser' value="Sign Up"/>
             <li class="login_link link">Already Signed Up?</li>
-            </div
+
           </form>
 
           <form class="log_in_form" action="">
             <!-- <p>Signup</p> -->
+            <h3>ShowUp</h3>
             <input name="name" id="loginName" class="signup" type="text" placeholder="Name"/></br>
             <input name="password" id="loginPassword" class="signup" type="text" placeholder="Password"/></br>
-            <input type="submit" class='LogInUser' value="Log In Motherfucker"/>
-            <li class="sign_up_link link">Are You Really That Stupid? Go Sign Up. Motherfucker!</li>
+            <input type="submit" class='LogInUser' value="Log In"/>
+            <li class="sign_up_link link">Go Sign Up</li>
           </form>
 
           <form class='form2'></form>

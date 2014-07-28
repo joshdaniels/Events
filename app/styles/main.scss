@@ -11,21 +11,62 @@ body {
   color: #333;
 }
 
-.link { color: white; font-weight: bold; list-style: none; background: black; width: 200px; overflow-x: wrap;}
-.main_nav ul { display: inline-flex; }
-.main_nav li { padding: 0 50px 10px 0; margin-bottom: 10px;}
+.link {
+  color: gray;
+  list-style: none;
+  margin-top:5px;
+  width: 200px;
+  overflow-x: wrap;
+  }
+.main_nav ul {
+  display: inline-flex;
+ }
+.main_nav li {
+  padding: 0 50px 10px 0;
+  margin-bottom: 10px;
+  }
 
 .concert_content{
   float:left;
 }s
 
-.form1, .form2, .log_in_form{ padding-top: 140px;}
+.form1, .form2, .log_in_form{
+  padding-top: 140px;
+  }
 
-.form1, .form2, .concert_form, .log_in_form { margin: auto; max-width: 500px; }
-.main_nav, .form1, .form2, .concert_form, .concert_content, .log_in_form , .user_concert_content{ display: none;}
-.main_nav ul { width: 100%; padding-top: 10px; background-color: black; }
-.main_nav li { color: white; font-weight: bold; }
+.form1, .form2, .concert_form, .log_in_form {
+  margin: auto; max-width: 500px;
+  }
+.main_nav, .form1, .form2, .concert_form, .concert_content, .log_in_form , .user_concert_content{
+   display: none;}
+.main_nav ul { width: 100%;
+  padding-top: 10px; background-color: black; }
+.main_nav li { color: gray; font-weight: bold; }
+.form1{
+margin-top: 48px;
+width: 331px;
+height: 440px;
+background-image:url("../images/signup_form.png");
+position:relative;
+padding-top: 191px;
+padding-left: 32px;
+}
+.form1 input{
+  width:266px;
+  margin-left:30px;
+  margin:0;
+  color:black;
+background-color:#d3d3d3;
 
+}
+.form1 input[type="submit"] {
+  background-color:#2fcc05;
+  color:white;
+}
+
+.signup{
+
+}
 .card {
   $card-border-color: $base-border-color;
   $card-border: 1px solid $card-border-color;

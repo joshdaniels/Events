@@ -1,4 +1,4 @@
- // Bourbon & Neat
+  // Bourbon & Neat
 @import '../../bower_components/bourbon/dist/bourbon';
 @import '../../bower_components/neat/app/assets/stylesheets/neat';
 @import 'base/base';
@@ -10,63 +10,158 @@ body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #333;
 }
+.submit{
+  background-color:#b2e9c6;
+}
 
-.link {
-  color: gray;
+%box {
+ background: rgba(black,0.5);
+  box-shadow: inset 0 0 0 1em rgba(black, 0.6), 0 3px 4px -1px rgba(black,0.4);
+  border: 0.5em solid rgba(white, 0.4);
+  border-radius: 1em;
+  transform: translateZ(0);
+  margin-top: 116px;
+}
+h3 {
+  color: rgba(white,0.99);
+  font-family: 'Lobster', cursive;
+  font-size: 5em;
+  margin: 0.5em;
+  text-align: center;
+  text-shadow: 2px 2px rgba(black,0.8);
+  margin-top: 5px;
+
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+
+.form1 {
+  margin-top: 116px;
+  @extend %box;
+  height: 30em;
+  left: 50%;
+  margin-left: -11em;
+
+
+
+  width: 22em;
+
+
+
+  input {
+    border: 0;
+    margin: 0.3em;
+    margin-left: 10%;
+    padding: 7px;
+    font-size: 1.5em;
+    width: 80%;
+  }
+
+  button {
+   @extend %button;
+    margin-left: 10%;
+    margin-top: 1.5em;
+    width: 80%;
+    background-color:#B2E9C6;
+
+
+  }
+}
+
+%box {
+ background: rgba(black,0.5);
+  box-shadow: inset 0 0 0 1em rgba(black, 0.6), 0 3px 4px -1px rgba(black,0.4);
+  border: 0.5em solid rgba(white, 0.4);
+  border-radius: 1em;
+  transform: translateZ(0);
+  margin-top: 116px;
+}
+h3 {
+  color: rgba(white,0.99);
+  font-family: 'Lobster', cursive;
+  font-size: 5em;
+  margin: 0.5em;
+  text-align: center;
+  text-shadow: 2px 2px rgba(black,0.8);
+  margin-top: 5px;
+
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+
+.log_in_form {
+  margin-top: 116px;
+  @extend %box;
+  height: 30em;
+  left: 50%;
+  margin-left: -11em;
+
+
+
+
+  width: 22em;
+
+
+
+  input {
+    border: 0;
+    margin: 0.3em;
+    margin-left: 10%;
+    padding: 7px;
+    font-size: 1.5em;
+    width: 80%;
+  }
+
+  button {
+   @extend %button;
+    margin-left: 10%;
+    margin-top: 1.5em;
+    width: 80%;
+
+
+  }
+}
+
+
+
+.link { color: white;
+  font-weight: bold;
   list-style: none;
-  margin-top:5px;
-  width: 200px;
-  overflow-x: wrap;
-  }
-.main_nav ul {
-  display: inline-flex;
- }
-.main_nav li {
-  padding: 0 50px 10px 0;
-  margin-bottom: 10px;
-  }
+   width: 200px;
+    overflow-x: wrap;
+    margin-left: 89px;
+margin-top: -5px
+    }
+    .going{
+      width:30px;
+      opacity:0.7;
+    }
+    .maybe{
+      width:30px;
+      opacity:0.7;
+    }
+    .not_going{
+      width:30px;
+      opacity:0.7;
+    }
+    .main_nav{
+      background-image:url("../images/nav_bar.png");
+      background-size: cover;
+    }
+.main_nav ul { display: inline-flex; }
+.main_nav li { padding-left:80px;
+   margin-bottom: 10px;}
 
 .concert_content{
   float:left;
 }s
 
-.form1, .form2, .log_in_form{
-  padding-top: 140px;
-  }
+.form1, .form2,{ padding-top: 140px;}
 
-.form1, .form2, .concert_form, .log_in_form {
-  margin: auto; max-width: 500px;
-  }
-.main_nav, .form1, .form2, .concert_form, .concert_content, .log_in_form , .user_concert_content{
-   display: none;}
-.main_nav ul { width: 100%;
-  padding-top: 10px; background-color: black; }
-.main_nav li { color: gray; font-weight: bold; }
-.form1{
-margin-top: 48px;
-width: 331px;
-height: 440px;
-background-image:url("../images/signup_form.png");
-position:relative;
-padding-top: 191px;
-padding-left: 32px;
-}
-.form1 input{
-  width:266px;
-  margin-left:30px;
-  margin:0;
-  color:black;
-background-color:#d3d3d3;
 
-}
-.form1 input[type="submit"] {
-  background-color:#2fcc05;
-  color:white;
-}
+.form1, .form2, .concert_form, .log_in_form { margin: auto; max-width: 500px; }
+.main_nav, .form1, .form2, .concert_form, .concert_content, .log_in_form , .user_concert_content{ display: none;}
+.main_nav ul { width: 100%; padding-top: 10px;  }
+.main_nav li { color: white; font-weight: bold; }
 
-.signup{
-
-}
 .card {
   $card-border-color: $base-border-color;
   $card-border: 1px solid $card-border-color;
@@ -130,9 +225,9 @@ background-color:#d3d3d3;
 
     }
     .going , .maybe, .notgoing { display: none; }
-    .going { background-color: green;}
-    .maybe { background-color: yellow;}
-    .notgoing { background-color: red;}
+    .going { background-color: #A0D166;}
+    .maybe { background-color: #FFC04E;}
+    .notgoing { background-color: #FF727B;}
     // .maybe    { top: -9px;}
     // .notgoing { top: -31px;}
 

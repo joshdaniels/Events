@@ -12,20 +12,12 @@
 {{title}}
 </div>
 <div class="card-copy">
-<p>{{description}}</p>
+<p class="event_description">{{description}}</p>
 </div>
-<div class="card-stats">
-<ul>
-	<li>Date<span>{{date}}</span></li>
-	<li>Time<span>{{time}}</span></li>
-	<li>City<span>{{city}}</span></li>
-	<li>Address<span>{{address}}</span></li>
-	<li>id<span>{{objectId}}</span></li>
-	<img class="going" src="../images/going_icon.png" data-id="{{objectId}}" />
-	<img class="maybe" src="../images/maybe_icon.png" data-id="{{objectId}}" />
-	<img class="not_going" src="../images/not_going_icon.png" data-id="{{objectId}}"/>
-</ul>
-</div>
+
+<img class="going" src="../images/going_icon.png" data-id="{{objectId}}" />
+<img class="maybe" src="../images/maybe_icon.png" data-id="{{objectId}}" />
+<img class="not_going" src="../images/not_going_icon.png" data-id="{{objectId}}"/>
 </div>
 </div>
 {{/each}}

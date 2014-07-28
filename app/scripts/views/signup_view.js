@@ -58,7 +58,6 @@ var SignupView = Backbone.View.extend ({
 
         Parse.User.logIn( username, password, {
             success: function(user) {
-              alert('User is logged IN');
               $('.concert_content').show();
               new ConcertListView({ collection: all_concerts});
               new MainNavView();

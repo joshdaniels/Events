@@ -26,13 +26,13 @@ var AddConcertView = Backbone.View.extend ({
           address: $('.address_field').val(),
           time: $('.time_field').val(),
           description: $('.description_field').val(),
-          image_url: $('.image_field').val(),
+          image_url: $('.image_field').val()
       });
 
       all_concerts.add(newconcert);     //add concert to the collection
       var user = Parse.User.current();  //grab the current user
       newconcert.set('user', user);     // Associate the concert instance with the user
-      
+
       newconcert.save(null, {
           success: function (newconcert) {
               /* Working!*/

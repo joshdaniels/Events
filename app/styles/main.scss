@@ -12,6 +12,8 @@ body {
 }
 
 .link { color: white; font-weight: bold; list-style: none; background: black; width: 200px; overflow-x: wrap;}
+.main_nav ul { display: inline-flex; }
+.main_nav li { padding: 0 20px 20px 0;}
 
 .concert_content{
   float:left;

@@ -8,15 +8,14 @@ var ConcertListView = Backbone.View.extend ({
 	},
 
 	initialize: function (){
-		$('.main_nav').hide();
+		// $('.main_nav').hide();
 		this.collection.on ('change', this.render, this);
 		this.render();
 	},
 
 	render:function (){
 		$('.form2').hide();
-		$('.concert_form').hide()
-		var list = this.collection;
+		$('.concert_form').hide();
 		var template = Handlebars.templates.concert;
 		var rendered = template({data:this.collection.toJSON()});
 	  this.$el.html(rendered);

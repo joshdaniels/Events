@@ -12,7 +12,7 @@ var Router = Backbone.Router.extend ({
 						$('.form1').show();
 						$('.form2').hide();
 						$('.main_nav').hide();
-						$('.concert_form').hide();
+						$('.concert_form').hide	();
 						$('.concert_content').hide();
 						$('.user_concert_content').hide();
 				new SignupView();

@@ -1,5 +1,10 @@
 {{#each data}}
 <div class="card">
+<div class="ribbon-wrapper" data-attend="{{attend}}">
+		<div class="ribbon going">Going</div>
+		<div class="ribbon maybe">Maybe</div>
+		<div class="ribbon notgoing">Not Going</div>
+</div>
 <div class="card-image">
 <img src="{{{image_url}}}" alt="">
 </div>
@@ -16,9 +21,9 @@
 	<li>City<span>{{city}}</span></li>
 	<li>Address<span>{{address}}</span></li>
 	<li>id<span>{{objectId}}</span></li>
-	<img class="going" src="../images/going_icon.png"/>
-	<img class="maybe" src="../images/maybe_icon.png"/>
-	<img class="not_going" src="../images/not_going_icon.png"/>
+	<img class="going" src="../images/going_icon.png" data-id="{{objectId}}" />
+	<img class="maybe" src="../images/maybe_icon.png" data-id="{{objectId}}" />
+	<img class="not_going" src="../images/not_going_icon.png" data-id="{{objectId}}"/>
 </ul>
 </div>
 </div>

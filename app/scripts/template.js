@@ -56,7 +56,11 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
 function program1(depth0,data) {
   
   var buffer = "", stack1, helper;
-  buffer += "\n<div class=\"card\">\n<div class=\"card-image\">\n<img src=\"";
+  buffer += "\n<div class=\"card\">\n<div class=\"ribbon-wrapper\" data-attend=\"";
+  if (helper = helpers.attend) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.attend); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + "\">\n		<div class=\"ribbon going\">Going</div>\n		<div class=\"ribbon maybe\">Maybe</div>\n		<div class=\"ribbon notgoing\">Not Going</div>\n</div>\n<div class=\"card-image\">\n<img src=\"";
   if (helper = helpers.image_url) { stack1 = helper.call(depth0, {hash:{},data:data}); }
   else { helper = (depth0 && depth0.image_url); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
   if(stack1 || stack1 === 0) { buffer += stack1; }
@@ -92,7 +96,19 @@ function program1(depth0,data) {
   if (helper = helpers.objectId) { stack1 = helper.call(depth0, {hash:{},data:data}); }
   else { helper = (depth0 && depth0.objectId); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
   buffer += escapeExpression(stack1)
-    + "</span></li>\n	<img class=\"going\" src=\"../images/going_icon.png\"/>\n	<img class=\"maybe\" src=\"../images/maybe_icon.png\"/>\n	<img class=\"not_going\" src=\"../images/not_going_icon.png\"/>\n</ul>\n</div>\n</div>\n</div>\n";
+    + "</span></li>\n	<img class=\"going\" src=\"../images/going_icon.png\" data-id=\"";
+  if (helper = helpers.objectId) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.objectId); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + "\" />\n	<img class=\"maybe\" src=\"../images/maybe_icon.png\" data-id=\"";
+  if (helper = helpers.objectId) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.objectId); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + "\" />\n	<img class=\"not_going\" src=\"../images/not_going_icon.png\" data-id=\"";
+  if (helper = helpers.objectId) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.objectId); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + "\"/>\n</ul>\n</div>\n</div>\n</div>\n";
   return buffer;
   }
 

@@ -11,6 +11,7 @@ var AddConcertView = Backbone.View.extend ({
       // $('.fomr2').hide();
       // $('.concert_form').hide();
       // $('.concert_content').show();
+
   },
 
   render:function (){
